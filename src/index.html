@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REMIST SMART CHAIN</title>
+    <link rel="icon" type="image/png" href="images/metamask-fox.svg">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/estilo.css" />
+    <!-- Google icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="text-center"><span class="material-icons"> grid_view </span><b> REMIST SMART CHAIN</b></h1>
+    <hr/><br/> 
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card card-body bg-dark rounded-0 mb-4">
+            <h1 class="text-center"></h1>
+            <div class="d-flex align-items-center">
+              <span class="material-icons"> account_balance_wallet </span>
+              <span class="ms-2">Wallet</span>
+            </div>
+            <span id="account"></span>
+          </div>
+          
+          <!-- Formulario para casas nuevas -->
+          <form id="houseForm" class="card card-body bg-dark">
+            <h3>Añadir casa</h3>
+            <label for="title-rooms">Nombre completo</label>
+            <input type="text" id="seller"class="form-control bg-dark border-0 rounded-0 text-light my-4" autofocus/>
+            <label for="title-rooms">Ubicación</label>
+            <input type="text" id="street" class="form-control bg-dark border-0 rounded-0 text-light my-4" placeholder="Calle .., 7" ></input>
+            <label for="title-rooms">Estado</label>
+            <input type="text" id="state" class="form-control bg-dark border-0 rounded-0 text-light my-4" placeholder="Obra nueva" ></input>
+            <label for="title-rooms">Habitaciones</label>
+            <input type="number" id="rooms" class="form-control bg-dark border-0 rounded-0 text-light my-4" ></input>
+            <label for="title-price">Precio</label>
+            <input type="number" class="form-control bg-dark border-0 rounded-0 text-light my-4" id="price"></input> 
+            <br/><button class="btn btn-default" style="border-color:gray">Añadir</button>
+          </form>
+        </div>
+
+        <!-- Carga las casas -->
+        <div class="col-md-8">
+          <div id="housesList"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/truffle-contract.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/formulario.js"></script>
+  </body>
+</html>
